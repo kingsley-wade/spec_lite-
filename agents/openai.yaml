@@ -1,0 +1,3 @@
+display_name: Kiro-Lite Specs
+short_description: Create Kiro-like requirements, design, and task specs before coding.
+default_prompt: Use Kiro-Lite Specs to plan this work with requirements.md, design.md, and tasks.md. Iterate with me until the specs are approved, then execute tasks by checklist.

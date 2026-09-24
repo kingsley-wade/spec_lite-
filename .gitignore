@@ -1,0 +1,18 @@
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# npm artifacts
+node_modules/
+*.tgz
+.npm-cache/

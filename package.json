@@ -1,0 +1,29 @@
+{
+  "name": "kiro-lite-specs",
+  "version": "0.1.0",
+  "description": "Kiro-like specification workflow for Codex and Claude Code",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "kiro-lite-specs": "bin/kiro-lite-specs.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "assets/",
+    "references/",
+    "scripts/",
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "private": false
+}
