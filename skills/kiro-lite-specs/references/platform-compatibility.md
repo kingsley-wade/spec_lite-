@@ -11,6 +11,8 @@ kiro-lite-specs/
   scripts/
 ```
 
+In this repository, the skill directory is stored under skills/kiro-lite-specs/. The npm CLI copies its contents into the selected platform directories without including the CLI implementation itself.
+
 ## Claude Code
 
 Install by placing the `kiro-lite-specs` directory in a Claude skills search path, such as a user skills directory. Invoke it by asking for Kiro-like specs, spec mode, or requirements/design/tasks planning.

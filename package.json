@@ -1,20 +1,33 @@
 {
   "name": "kiro-lite-specs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Kiro-like specification workflow for Codex and Claude Code",
   "license": "MIT",
+  "author": "kingsley-wade",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingsley-wade/spec_lite-.git"
+  },
+  "homepage": "https://github.com/kingsley-wade/spec_lite-#readme",
+  "bugs": {
+    "url": "https://github.com/kingsley-wade/spec_lite-/issues"
+  },
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "spec-driven-development",
+    "kiro"
+  ],
   "type": "module",
   "bin": {
     "kiro-lite-specs": "bin/kiro-lite-specs.mjs"
   },
   "files": [
-    "SKILL.md",
-    "agents/",
-    "assets/",
-    "references/",
-    "scripts/",
+    "skills/",
     "bin/",
     "lib/",
+    "CHANGELOG.md",
     "LICENSE",
     "README.md"
   ],
@@ -23,7 +36,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "ci": "npm test && npm run pack:check"
   },
   "private": false
 }

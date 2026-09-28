@@ -6,6 +6,8 @@ import { join } from 'node:path';
 import { install, doctor, uninstall } from '../lib/installer.mjs';
 import { validateSpec } from '../lib/validator.mjs';
 
+const canonicalSkill = join(process.cwd(), 'skills', 'kiro-lite-specs');
+
 async function fixture(t) {
   const root = await mkdtemp(join(tmpdir(), 'kiro-lite-specs-test-'));
   t.after(() => rm(root, { recursive: true, force: true }));
@@ -17,6 +19,7 @@ async function fixture(t) {
 }
 
 test('installs both agents and preserves edited files across update and uninstall', async (t) => {
+  assert.match(await readFile(join(canonicalSkill, 'SKILL.md'), 'utf8'), /Kiro-Lite Specs/);
   const options = await fixture(t);
   await install(options);
   const codex = join(options.root, '.agents', 'skills', 'kiro-lite-specs');
@@ -30,6 +33,13 @@ test('installs both agents and preserves edited files across update and uninstal
   assert.match((await doctor(options)).join('\n'), /changed files/);
   assert.match(await readFile(join(claude, 'SKILL.md'), 'utf8'), /Kiro-Lite Specs/);
   assert.equal(await readFile(join(codex, 'SKILL.md'), 'utf8'), 'local edit');
+});
+
+test('installs user-scoped skills into each platform home directory', async (t) => {
+  const options = { ...await fixture(t), scope: 'user' };
+  await install(options);
+  assert.match(await readFile(join(options.home, '.agents', 'skills', 'kiro-lite-specs', 'SKILL.md'), 'utf8'), /Kiro-Lite Specs/);
+  assert.match(await readFile(join(options.home, '.claude', 'skills', 'kiro-lite-specs', 'SKILL.md'), 'utf8'), /Kiro-Lite Specs/);
 });
 
 test('project template overrides user defaults and update refreshes managed copies', async (t) => {

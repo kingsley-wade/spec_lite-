@@ -50,3 +50,4 @@ Every task list should cover these phases unless explicitly not applicable:
 - Do not mark `[x]` without evidence.
 - If blocked, mark `[!]` and record the exact blocker under acceptance evidence.
 - If a task becomes too large, split it and ask the user to approve the updated `tasks.md`.
+

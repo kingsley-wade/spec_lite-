@@ -56,3 +56,4 @@ Adapt this to the language ecosystem:
 ## Drift Rule
 
 If implementation changes the intended tree, update `design.md` and the affected task before continuing.
+

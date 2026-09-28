@@ -1,6 +1,6 @@
 ---
 name: kiro-lite-specs
-description: Use when starting a new project, feature, bugfix, refactor, or milestone and the user wants Kiro-like spec-driven development with requirements.md, design.md, tasks.md, repository tree conventions, interactive approval gates, and checklist-based task execution. Also use when the user asks for "Kiro specs", "spec mode", "three spec docs", "requirements design tasks", or a lightweight cross-agent spec workflow for Claude Code, Codex, or opencode.
+description: Use when a user requests Kiro-style spec-driven development, spec mode, approval-gated planning, or checklist execution for a new project, feature, bugfix, refactor, or milestone in Codex, Claude Code, or opencode.
 metadata:
   short-description: Kiro-like spec workflow with approval gates and task checklists
 ---

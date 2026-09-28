@@ -19,3 +19,4 @@ Follow these gates:
 7. Record acceptance evidence before marking a task `[x]`.
 
 Use the templates and rules from the `kiro-lite-specs` skill directory when available.
+
